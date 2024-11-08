@@ -7,7 +7,7 @@ export class sneakers {
   id!: number;
 
   @Column()
-  marca!: string;
+  brand!: string;
 
   @Column("text")
   description!: string;
