@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
 import { AppDataSource } from "../data-source";
-import { sneakers } from "../entities/sneakers";
+import { Sneakers } from "../entities/Sneakers";
 
-const sneakersRepository = AppDataSource.getRepository(sneakers);
+const sneakersRepository = AppDataSource.getRepository(Sneakers);
 
-// GET - Obtener Todos los sneakersos
+// GET - Obtener Todos los Sneakersos
 export const getAllsneakers = async(red: Request, res: Response) => {
   try {
     const sneakers = await sneakersRepository.find();
@@ -35,7 +35,7 @@ export const getsneakersById = async(req: Request, res: Response) => {
 export const createsneakers = async(req: Request, res: Response) => {
   try {
     const { brand, description, price, color, size  } = req.body;
-    const sneakers = new sneakers();
+    const sneakers = new Sneakers();
     sneakers.brand = brand;
     sneakers.description = description;
     sneakers.price = price;

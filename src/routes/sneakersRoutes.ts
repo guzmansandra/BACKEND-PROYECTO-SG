@@ -5,7 +5,7 @@ import {
   createsneakers,
   updatesneakers,
   deletesneakers,
-} from "../controllers/sneakersControllers";
+} from "../controllers/sneakersControllers"
 
 const sneakersRoutes = Router();
 
@@ -75,9 +75,9 @@ sneakersRoutes.get("/:id", getsneakersById);
  *               price:
  *                 type: number
  *               color: 
- *                 type: text
+ *                 type: string
  *               size: 
- *                 type: decimal
+ *                 type: number
  *     responses:
  *       201:
  *         description: sneakers creado
@@ -113,9 +113,9 @@ sneakersRoutes.post("/", createsneakers);
  *               price:
  *                 type: number
  *               color: 
- *                 type: text
+ *                 type: string
  *               size: 
- *                 type: decimal
+ *                 type: number
  *     responses:
  *       200:
  *         description: sneakers actualizado
